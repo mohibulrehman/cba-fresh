@@ -1,0 +1,6 @@
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\SML Extensions.deps.json
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\SML Extensions.dll
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\SML Extensions.pdb
+C:\bin\Release\SML Extensions.deps.json
+C:\bin\Release\SML Extensions.dll
+C:\bin\Release\SML Extensions.pdb

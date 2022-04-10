@@ -1,0 +1,17 @@
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\Sample.sml
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.exe
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.deps.json
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.runtimeconfig.json
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.runtimeconfig.dev.json
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\ref\SVM.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SVM.pdb
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.csprojAssemblyReference.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.GeneratedMSBuildEditorConfig.editorconfig
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.AssemblyInfoInputs.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.AssemblyInfo.cs
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.csproj.CoreCompileInputs.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\ref\SVM.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.pdb
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.genruntimeconfig.cache

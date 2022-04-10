@@ -1,0 +1,8 @@
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\netcoreapp3.1\SML Extensions.deps.json
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\netcoreapp3.1\SML Extensions.dll
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\bin\Release\netcoreapp3.1\SML Extensions.pdb
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\obj\Release\netcoreapp3.1\SML Extensions.AssemblyInfoInputs.cache
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\obj\Release\netcoreapp3.1\SML Extensions.AssemblyInfo.cs
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\obj\Release\netcoreapp3.1\SML Extensions.csproj.CoreCompileInputs.cache
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\obj\Release\netcoreapp3.1\SML Extensions.dll
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\SML Extensions\obj\Release\netcoreapp3.1\SML Extensions.pdb

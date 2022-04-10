@@ -1,0 +1,3 @@
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\Debugger\bin\Release\Debugger.deps.json
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\Debugger\bin\Release\Debugger.dll
+C:\Box\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\Skeleton Solution 1920\SVM\Debugger\bin\Release\Debugger.pdb

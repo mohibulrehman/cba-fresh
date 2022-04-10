@@ -1,0 +1,12 @@
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SML Extensions.deps.json
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SML Extensions.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\ref\SML Extensions.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\bin\Debug\SML Extensions.pdb
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.csprojAssemblyReference.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.GeneratedMSBuildEditorConfig.editorconfig
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.AssemblyInfoInputs.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.AssemblyInfo.cs
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.csproj.CoreCompileInputs.cache
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\ref\SML Extensions.dll
+E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.pdb
