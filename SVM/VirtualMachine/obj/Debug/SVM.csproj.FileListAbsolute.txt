@@ -15,3 +15,20 @@ E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachi
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\ref\SVM.dll
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.pdb
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\VirtualMachine\obj\Debug\SVM.genruntimeconfig.cache
+D:\hull\cba\cba-fresh\SVM\bin\Debug\Sample.sml
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.exe
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.deps.json
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.runtimeconfig.json
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.runtimeconfig.dev.json
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.dll
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SVM.pdb
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.csproj.AssemblyReference.cache
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.GeneratedMSBuildEditorConfig.editorconfig
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.AssemblyInfoInputs.cache
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.AssemblyInfo.cs
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.csproj.CoreCompileInputs.cache
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.dll
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\refint\SVM.dll
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.pdb
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\SVM.genruntimeconfig.cache
+D:\hull\cba\cba-fresh\SVM\VirtualMachine\obj\Debug\ref\SVM.dll

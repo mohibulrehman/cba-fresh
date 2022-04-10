@@ -33,6 +33,16 @@
             IInstruction instruction = null;
 
             #region TASK 1 - TO BE IMPLEMENTED BY THE STUDENT
+
+            foreach (Type entity in SvmVirtualMachine.instructionsList)
+            {
+                if (entity.Name.ToUpper() == opcode.ToUpper())
+                {
+                    instruction = (IInstruction)Activator.CreateInstance(entity);
+                    return instruction;
+                }
+            }
+
             #endregion
 
             return instruction;
@@ -43,6 +53,18 @@
             IInstructionWithOperand instruction = null;
 
             #region TASK 1 - TO BE IMPLEMENTED BY THE STUDENT
+
+            foreach (Type entity in SvmVirtualMachine.instructionsList)
+            {
+                if (entity.Name.ToUpper() == opcode.ToUpper())
+                {
+                    instruction = (IInstructionWithOperand)Activator.CreateInstance(entity);
+                    instruction.Operands = operands;
+
+                    return instruction;
+                }
+            }
+
             #endregion
 
             return instruction;

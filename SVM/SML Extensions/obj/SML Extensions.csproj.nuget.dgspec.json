@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Box\\Box Sync\\Lecturing\\ComponentBasedArch\\2122\\ACW\\2022\\SVM\\SML Extensions\\SML Extensions.csproj": {}
+    "D:\\hull\\cba\\cba-fresh\\SVM\\SML Extensions\\SML Extensions.csproj": {}
   },
   "projects": {
-    "C:\\Box\\Box Sync\\Lecturing\\ComponentBasedArch\\2122\\ACW\\2022\\SVM\\SML Extensions\\SML Extensions.csproj": {
+    "D:\\hull\\cba\\cba-fresh\\SVM\\SML Extensions\\SML Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Box\\Box Sync\\Lecturing\\ComponentBasedArch\\2122\\ACW\\2022\\SVM\\SML Extensions\\SML Extensions.csproj",
+        "projectUniqueName": "D:\\hull\\cba\\cba-fresh\\SVM\\SML Extensions\\SML Extensions.csproj",
         "projectName": "SML Extensions",
-        "projectPath": "C:\\Box\\Box Sync\\Lecturing\\ComponentBasedArch\\2122\\ACW\\2022\\SVM\\SML Extensions\\SML Extensions.csproj",
-        "packagesPath": "C:\\Users\\DCS-Streaming2\\.nuget\\packages\\",
-        "outputPath": "C:\\Box\\Box Sync\\Lecturing\\ComponentBasedArch\\2122\\ACW\\2022\\SVM\\SML Extensions\\obj\\",
+        "projectPath": "D:\\hull\\cba\\cba-fresh\\SVM\\SML Extensions\\SML Extensions.csproj",
+        "packagesPath": "C:\\Users\\Muheeb\\.nuget\\packages\\",
+        "outputPath": "D:\\hull\\cba\\cba-fresh\\SVM\\SML Extensions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DCS-Streaming2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Muheeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

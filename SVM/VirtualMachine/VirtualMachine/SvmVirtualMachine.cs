@@ -9,6 +9,7 @@ namespace SVM
     using System.Collections.Generic;
     using System.IO;
     using SVM.VirtualMachine;
+    using System.Reflection;
     #endregion
 
     /// <summary>
@@ -22,6 +23,10 @@ namespace SVM
         private const string InvalidOperandsMessage = "The instruction \r\n\r\n\t{0}\r\n\r\nis invalid because there are too many operands. An instruction may have no more than one operand.";
         private const string InvalidLabelMessage = "Invalid label: the label {0} at line {1} is not associated with an instruction.";
         private const string ProgramCounterMessage = "Program counter violation; the program counter value is out of range";
+        #endregion
+
+        #region MyVariables
+        public static List<Type> instructionsList = new List<Type>();
         #endregion
 
         #region Fields
@@ -48,6 +53,8 @@ namespace SVM
             if (CommandLineIsValid(args))
             {
                 SvmVirtualMachine vm = new SvmVirtualMachine();
+                loadInstructionListFromPath();
+
                 try
                 {
                     vm.Compile(args[0]);
@@ -63,6 +70,25 @@ namespace SVM
             }
         }
         #endregion
+
+        private static void loadInstructionListFromPath()
+        {
+
+            Assembly assemblyName = Assembly.GetExecutingAssembly();
+
+            foreach (Type entity in assemblyName.ExportedTypes)
+            {
+
+                foreach (Type tpe in entity.GetInterfaces())
+                {
+
+                    if (tpe.Name == "IInstruction" || tpe.Name == "IInstructionwithoperand")
+                    {
+                        instructionsList.Add(entity);
+                    }
+                }
+            }
+        }
 
         #region Properties
         /// <summary>
