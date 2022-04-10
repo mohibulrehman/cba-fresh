@@ -9,13 +9,14 @@ namespace SVM
     using System.Collections.Generic;
     using System.IO;
     using SVM.VirtualMachine;
+    using System.Linq;
     using System.Reflection;
     #endregion
 
     /// <summary>
     /// Implements the Simple Virtual Machine (SVM) virtual machine 
     /// </summary>
-    public sealed class SvmVirtualMachine 
+    public sealed class SvmVirtualMachine : IVirtualMachine
     {
         #region Constants
         private const string CompilationErrorMessage = "An SVM compilation error has occurred at line {0}.\r\n\r\n{1}";
@@ -25,15 +26,17 @@ namespace SVM
         private const string ProgramCounterMessage = "Program counter violation; the program counter value is out of range";
         #endregion
 
-        #region MyVariables
-        public static List<Type> instructionsList = new List<Type>();
-        #endregion
-
         #region Fields
         private IDebugger debugger = null;
         private List<IInstruction> program = new List<IInstruction>();
+        private int instructionDebugIndex = -1;
         private Stack stack = new Stack();
         private int programCounter = 0;
+        public delegate void CallBackButtonPressed(string result);
+
+        private string[] label = null;
+        public static List<Type> instructionsList = new List<Type>();
+
         #endregion
 
         #region Constructors
@@ -43,7 +46,66 @@ namespace SVM
             #region Task 5 - Debugging 
             // Do something here to find and create an instance of a type which implements 
             // the IDebugger interface, and assign it to the debugger field
+
+            createDebuggerInstance();
+
             #endregion
+        }
+
+        private void createDebuggerInstance()
+        {
+
+            if (false)
+            {
+
+                var tpe = (typeof(IDebugger).Assembly)
+                                              .GetTypes().Where(x => x.Name == "IDebugger")
+                                              .ToList();
+
+                if (tpe.Count() != 0)
+                {
+                    Type type = tpe[0];
+                    debugger.VirtualMachine = this;
+                    debugger = (IDebugger)Activator.CreateInstance(type);
+                }
+
+                Console.WriteLine("what is this");
+                return;
+            }
+
+            // Getting list of files
+            var files = Directory.GetFiles(Environment.CurrentDirectory, "Debugger.dll");
+
+            Type[] types;
+
+            foreach (var file in files)
+            {
+                try
+                {
+                    types = Assembly.LoadFrom(file).GetTypes();
+                }
+                catch (Exception exception)
+                {
+                    String msg = exception.Message;
+                    Console.WriteLine(msg);
+                    continue;  // Can't load as .NET assembly, so ignoring it
+                }
+
+                Console.WriteLine("yes it should");
+                types =
+                    types.Where(t => t.IsClass && t.GetInterfaces().Contains(typeof(IDebugger))
+                    && t.Name.Equals("debugger", StringComparison.InvariantCultureIgnoreCase)).ToArray();
+
+                if (types.Count() != 0)
+                {
+                    Type type = types[0];
+                    debugger = (IDebugger)Activator.CreateInstance(typeof(IDebugger));
+                }
+                else
+                {
+                    throw new SvmCompilationException("Some Thing invalid in SML source instruction has been found.");
+                }
+            }
         }
         #endregion
 
@@ -53,14 +115,14 @@ namespace SVM
             if (CommandLineIsValid(args))
             {
                 SvmVirtualMachine vm = new SvmVirtualMachine();
-                loadInstructionListFromPath();
 
+                loadInstructionListFromPath();
                 try
                 {
                     vm.Compile(args[0]);
                     vm.Run();
                 }
-                catch(SvmCompilationException)
+                catch (SvmCompilationException)
                 {
                 }
                 catch (SvmRuntimeException err)
@@ -69,7 +131,6 @@ namespace SVM
                 }
             }
         }
-        #endregion
 
         private static void loadInstructionListFromPath()
         {
@@ -89,6 +150,7 @@ namespace SVM
                 }
             }
         }
+        #endregion
 
         #region Properties
         /// <summary>
@@ -114,17 +176,16 @@ namespace SVM
         public int ProgramCounter
         {
             #region TASK 1 - TO BE IMPLEMENTED BY THE STUDENT
-            get; set;
+            get { return programCounter; }
+            set { programCounter++; }
             #endregion
         }
+
         #endregion
 
         #region Public Methods
 
         #endregion
-
-        #region Non-public Methods
-
 
         /// <summary>
         /// Reads the specified file and tries to 
@@ -153,7 +214,7 @@ namespace SVM
                     while (!sourceFile.EndOfStream)
                     {
                         string instruction = sourceFile.ReadLine();
-                        if (!String.IsNullOrEmpty(instruction) && 
+                        if (!String.IsNullOrEmpty(instruction) &&
                             !String.IsNullOrWhiteSpace(instruction))
                         {
                             ParseInstruction(instruction, lineNumber);
@@ -164,7 +225,7 @@ namespace SVM
             }
             catch (SvmCompilationException err)
             {
-                Console.WriteLine(CompilationErrorMessage, lineNumber, err.Message );
+                Console.WriteLine(CompilationErrorMessage, lineNumber, err.Message);
                 throw;
             }
         }
@@ -184,6 +245,32 @@ namespace SVM
             #region TASKS 5 & 7 - MAY REQUIRE MODIFICATION BY THE STUDENT
             // For task 5 (debugging), you should construct a IDebugFrame instance and
             // call the Break() method on the IDebugger instance stored in the debugger field
+
+            SvmVirtualMachine svmVirtualMachine = new SvmVirtualMachine();
+            programCounter = 0;
+            foreach (var instruction in program)
+            {
+                if (this.instructionDebugIndex > 0 && this.instructionDebugIndex == programCounter)
+                {
+                    /*Console.WriteLine("Never come usually Dear");
+                    FrameDebug debugFrame = new FrameDebug();
+                    debugFrame.CodeFrame = program;
+                    debugFrame.CurrentInstruction = instruction;
+                                      
+                    if (debugger == null)
+                        createDebuggerInstance();
+
+                    debugger.Break(debugFrame);*/
+
+                    return;
+
+                }
+                instruction.VirtualMachine = svmVirtualMachine;
+                instruction.Run();
+
+                programCounter++;
+            }
+
             #endregion
             #endregion
 
@@ -204,13 +291,30 @@ namespace SVM
         private void ParseInstruction(string instruction, int lineNumber)
         {
             #region TASK 5 & 7 - MAY REQUIRE MODIFICATION BY THE STUDENT
+
+            //  For Debugging
+            if (instruction.StartsWith('*'))
+            {
+                instruction = instruction.Trim('*');
+                instruction = instruction.TrimStart();
+                this.instructionDebugIndex = lineNumber;
+            }
+
+            //  For Labeling
+            if (instruction.StartsWith('%'))
+            {
+                label = instruction.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                label[0] = label[0].Trim('%');
+                instruction = label[1];
+            }
+
             #endregion
 
             string[] tokens = null;
             if (instruction.Contains("\""))
             {
                 tokens = instruction.Split(new char[] { '\"' }, StringSplitOptions.RemoveEmptyEntries);
-                
+
                 // Remove any unnecessary whitespace
                 for (int i = 0; i < tokens.Length; i++)
                 {
@@ -222,7 +326,7 @@ namespace SVM
                 // Tokenize the instruction string by separating on spaces
                 tokens = instruction.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             }
-            
+
 
             // Ensure the correct number of operands
             if (tokens.Length > 3)
@@ -239,7 +343,7 @@ namespace SVM
                     program.Add(JITCompiler.CompileInstruction(tokens[0], tokens[1].Trim('\"')));
                     break;
                 case 3:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0], tokens[1].Trim('\"'),tokens[2].Trim('\"')));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0], tokens[1].Trim('\"'), tokens[2].Trim('\"')));
                     break;
             }
         }
@@ -260,7 +364,7 @@ namespace SVM
                 valid = false;
             }
 
-            if (valid && !args[0].EndsWith(".sml",StringComparison.CurrentCultureIgnoreCase))
+            if (valid && !args[0].EndsWith(".sml", StringComparison.CurrentCultureIgnoreCase))
             {
                 DisplayUsageMessage("SML programs must be in a file named with a .sml extension");
                 valid = false;
@@ -282,7 +386,8 @@ namespace SVM
             Console.WriteLine("svm program_name.sml");
         }
         #endregion
-        #endregion
+
+
 
         #region System.Object overrides
         /// <summary>
