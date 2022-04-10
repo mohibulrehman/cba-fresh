@@ -1,0 +1,6 @@
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\bin\Debug\net5.0\CoverletSourceRootsMapping
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\obj\Debug\net5.0\TestProjectTask4.csproj.AssemblyReference.cache
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\obj\Debug\net5.0\TestProjectTask4.GeneratedMSBuildEditorConfig.editorconfig
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\obj\Debug\net5.0\TestProjectTask4.AssemblyInfoInputs.cache
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\obj\Debug\net5.0\TestProjectTask4.AssemblyInfo.cs
+D:\hull\cba\cba-fresh\SVM\TestProjectTask4\obj\Debug\net5.0\TestProjectTask4.csproj.CoreCompileInputs.cache

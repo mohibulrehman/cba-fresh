@@ -10,3 +10,15 @@ E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensio
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.dll
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\ref\SML Extensions.dll
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\SML Extensions\obj\Debug\SML Extensions.pdb
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SML Extensions.deps.json
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SML Extensions.dll
+D:\hull\cba\cba-fresh\SVM\bin\Debug\SML Extensions.pdb
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.csproj.AssemblyReference.cache
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.GeneratedMSBuildEditorConfig.editorconfig
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.AssemblyInfoInputs.cache
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.AssemblyInfo.cs
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.csproj.CoreCompileInputs.cache
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.dll
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\refint\SML Extensions.dll
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\SML Extensions.pdb
+D:\hull\cba\cba-fresh\SVM\SML Extensions\obj\Debug\ref\SML Extensions.dll
