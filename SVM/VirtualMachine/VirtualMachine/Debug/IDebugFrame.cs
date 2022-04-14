@@ -10,13 +10,13 @@ namespace SVM.VirtualMachine.Debug
         /// intending to execute. When the debugger breaks at the instruction, the instruction
         /// will not yet have been executed
         /// </summary>
-        IInstruction CurrentInstruction { get; }
+        public IInstruction CurrentInstruction { set; get; }
 
         /// <summary>
         /// Returns a list of a maximum of 9 instructions, containing the current instruction 
         /// and up to a maximum of 4 instructions preceding the current instruction, and up to
         /// a maximum of 4 instructions succeeding the current instruction
         /// </summary>
-        List<IInstruction> CodeFrame { get; }
+        public List<IInstruction> CodeFrame { set; get; }
     }
 }

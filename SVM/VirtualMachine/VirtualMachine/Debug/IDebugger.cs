@@ -1,4 +1,6 @@
-﻿namespace SVM.VirtualMachine.Debug
+﻿using System;
+
+namespace SVM.VirtualMachine.Debug
 {
     public interface IDebugger
     {
@@ -10,12 +12,12 @@
         /// visibly highlighted in the Code section of the Debugger window
         /// </summary>
         /// <param name="debugFrame">An IDebugFrame instance which is sent to the debugger</param>
-        void Break(IDebugFrame debugFrame);
+        void Break(IDebugFrame debugFrame, Action<string> callback);
 
         /// <summary>
         /// Assigns a reference to the virtual machine 
         /// that is executing this instruction
         /// </summary>
-        SvmVirtualMachine VirtualMachine { set; }
+        SvmVirtualMachine VirtualMachine { get; set; }
     }
 }

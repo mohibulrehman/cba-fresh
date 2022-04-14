@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "SVM/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SVM.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SVM.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SVM/1.0.0": {
+      "type": "project",
+      "path": "../VirtualMachine/SVM.csproj",
+      "msbuildProject": "../VirtualMachine/SVM.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "SVM >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Muheeb\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\hull\\cba\\cba-fresh\\SVM\\VirtualMachine\\SVM.csproj": {
+              "projectPath": "D:\\hull\\cba\\cba-fresh\\SVM\\VirtualMachine\\SVM.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

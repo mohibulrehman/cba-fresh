@@ -246,30 +246,9 @@ namespace SVM
             // For task 5 (debugging), you should construct a IDebugFrame instance and
             // call the Break() method on the IDebugger instance stored in the debugger field
 
-            SvmVirtualMachine svmVirtualMachine = new SvmVirtualMachine();
             programCounter = 0;
-            foreach (var instruction in program)
-            {
-                if (instruction.isDebuggedLie && instruction.lineNumber == programCounter)
-                {
-                    /*Console.WriteLine("Never come usually Dear");
-                    FrameDebug debugFrame = new FrameDebug();
-                    debugFrame.CodeFrame = program;
-                    debugFrame.CurrentInstruction = instruction;
-                                      
-                    if (debugger == null)
-                        createDebuggerInstance();
 
-                    debugger.Break(debugFrame);*/
-
-                    return;
-
-                }
-                instruction.VirtualMachine = svmVirtualMachine;
-                instruction.Run();
-
-                programCounter++;
-            }
+            runAllInstructions();
 
             #endregion
             #endregion
@@ -282,6 +261,38 @@ namespace SVM
                                         memUsed));
         }
 
+
+        private void runAllInstructions()
+        {
+            for (int index = programCounter; index < program.Count; index++)
+            {
+                {
+
+                    IInstruction instruction = program[index];
+                    if (instruction.isDebuggedLie && instruction.lineNumber == programCounter)
+                    {
+                        instruction.isDebuggedLie = false;
+                        FrameDebug debugFrame = new FrameDebug();
+                        debugFrame.CodeFrame = program;
+                        debugFrame.CurrentInstruction = instruction;
+
+                        if (debugger == null)
+                        {
+                            createDebuggerInstance();
+                        }
+
+                        debugger.Break(debugFrame, callback =>
+                        {
+                            runAllInstructions();
+
+                        });
+                    }
+                    instruction.VirtualMachine = this;
+                    instruction.Run();
+                    programCounter++;
+                }
+            }
+        }
         /// <summary>
         /// Parses a string from a .sml file containing a single
         /// SML instruction

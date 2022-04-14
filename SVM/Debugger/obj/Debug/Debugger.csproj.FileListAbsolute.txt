@@ -10,15 +10,3 @@ E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\Debugger\obj
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\Debugger\obj\Debug\Debugger.dll
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\Debugger\obj\Debug\ref\Debugger.dll
 E:\Box Sync\Box Sync\Lecturing\ComponentBasedArch\2021\ACW\2021\SVM\Debugger\obj\Debug\Debugger.pdb
-D:\hull\cba\cba-fresh\SVM\bin\Debug\Debugger.deps.json
-D:\hull\cba\cba-fresh\SVM\bin\Debug\Debugger.dll
-D:\hull\cba\cba-fresh\SVM\bin\Debug\Debugger.pdb
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.csproj.AssemblyReference.cache
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.GeneratedMSBuildEditorConfig.editorconfig
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.AssemblyInfoInputs.cache
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.AssemblyInfo.cs
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.csproj.CoreCompileInputs.cache
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.dll
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\refint\Debugger.dll
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\Debugger.pdb
-D:\hull\cba\cba-fresh\SVM\Debugger\obj\Debug\ref\Debugger.dll

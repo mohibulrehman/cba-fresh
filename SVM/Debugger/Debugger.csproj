@@ -19,4 +19,8 @@
     <OutputPath>..\bin\Release</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VirtualMachine\SVM.csproj" />
+  </ItemGroup>
+
 </Project>
