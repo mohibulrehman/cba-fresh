@@ -269,7 +269,29 @@ namespace SVM
                 {
 
                     IInstruction instruction = program[index];
-                    if (instruction.isDebuggedLie && instruction.lineNumber == programCounter)
+
+                    if (instruction.lineNumber != index)
+                    {
+
+                        throw new SvmRuntimeException(String.Format("program not in sequence",
+                                                       this.ToString(), ProgramCounter));
+                    }
+
+
+
+                    //MR: if has Label then do code for label here
+                    if (instruction.hasLabel)
+                    {
+                        //do work here for label
+
+                        if (instruction.labelIS.Equals("some string identifier")) { 
+                        }
+
+                    }
+
+
+
+                        if (instruction.isDebuggedLie && instruction.lineNumber == programCounter)
                     {
                         instruction.isDebuggedLie = false;
                         FrameDebug debugFrame = new FrameDebug();
@@ -286,6 +308,8 @@ namespace SVM
                             runAllInstructions();
 
                         });
+
+                        return;
                     }
                     instruction.VirtualMachine = this;
                     instruction.Run();
@@ -313,12 +337,19 @@ namespace SVM
                 isDebugLine = true;
             }
 
+
+            bool hasLabel = false;
+            String labelIS = "";
+
             //  For Labeling
             if (instruction.StartsWith('%'))
             {
                 label = instruction.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 label[0] = label[0].Trim('%');
                 instruction = label[1];
+
+                hasLabel = true;
+                labelIS = label[0];
             }
 
             #endregion
@@ -350,13 +381,13 @@ namespace SVM
             switch (tokens.Length)
             {
                 case 1:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine, lineNumber));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine, lineNumber,hasLabel, labelIS));
                     break;
                 case 2:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, tokens[1].Trim('\"')));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, hasLabel, labelIS, tokens[1].Trim('\"')));
                     break;
                 case 3:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, tokens[1].Trim('\"'), tokens[2].Trim('\"')));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, hasLabel, labelIS, tokens[1].Trim('\"'), tokens[2].Trim('\"')));
                     break;
             }
         }

@@ -28,7 +28,7 @@
         #endregion
 
         #region Non-public methods
-        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber)
+        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber, bool hasLabel, String label)
         {
             IInstruction instruction = null;
 
@@ -42,6 +42,8 @@
                         instruction = (IInstruction)Activator.CreateInstance(entity);
                         instruction.isDebuggedLie = isDebugLine;
                         instruction.lineNumber = lineNumber;
+                        instruction.hasLabel = hasLabel;
+                        instruction.labelIS = label;
                         return instruction;
                     }
                 }
@@ -53,7 +55,7 @@
             return instruction;
         }
 
-        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber, params string[] operands)
+        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber, bool hasLabel, String label, params string[] operands)
         {
             IInstructionWithOperand instruction = null;
 
@@ -68,6 +70,8 @@
                         instruction.isDebuggedLie = isDebugLine;
                         instruction.Operands = operands;
                         instruction.lineNumber = lineNumber;
+                        instruction.hasLabel = hasLabel;
+                        instruction.labelIS = label;
 
                         return instruction;
                     }

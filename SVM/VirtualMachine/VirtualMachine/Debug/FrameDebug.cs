@@ -11,5 +11,10 @@ namespace SVM.VirtualMachine.Debug
         public IInstruction CurrentInstruction { set; get; }
 
         public List<IInstruction> CodeFrame { set; get; }
+
+        public void showImage(string url)
+        {
+            //Show image via dialog
+        }
     }
 }

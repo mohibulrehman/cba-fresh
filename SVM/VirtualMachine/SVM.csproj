@@ -19,6 +19,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="Sample - Copy.sml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Sample.sml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

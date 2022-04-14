@@ -3,6 +3,7 @@ D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\testhost.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\SVM.deps.json
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\SVM.runtimeconfig.json
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\SVM.runtimeconfig.dev.json
+D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Sample - Copy.sml
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Sample.sml
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\SVM.exe
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\testhost.exe
@@ -16,6 +17,7 @@ D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\TestProjectTadk4.run
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\TestProjectTadk4.runtimeconfig.dev.json
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\TestProjectTadk4.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\TestProjectTadk4.pdb
+D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Castle.Core.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.TestPlatform.CoreUtilities.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -23,6 +25,7 @@ D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.TestPlatfo
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.TestPlatform.CrossPlatEngine.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.TestPlatform.Utilities.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Moq.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Newtonsoft.Json.dll
@@ -105,5 +108,3 @@ D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\obj\Debug\net5.0\refint\TestProjectTa
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\obj\Debug\net5.0\TestProjectTadk4.pdb
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\obj\Debug\net5.0\TestProjectTadk4.genruntimeconfig.cache
 D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\obj\Debug\net5.0\ref\TestProjectTadk4.dll
-D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Castle.Core.dll
-D:\hull\cba\cba-fresh\SVM\TestProjectTadk4\bin\Debug\net5.0\Moq.dll

@@ -82,6 +82,11 @@
 
         public bool isDebuggedLie { get ; set ; }
         public int lineNumber { get; set; }
+
+
+        public bool hasLabel { set; get; }
+        public String labelIS { set; get; }
+
         #endregion
     }
 }

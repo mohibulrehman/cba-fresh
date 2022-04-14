@@ -18,5 +18,7 @@ namespace SVM.VirtualMachine.Debug
         /// a maximum of 4 instructions succeeding the current instruction
         /// </summary>
         public List<IInstruction> CodeFrame { set; get; }
+
+        void showImage(string url);
     }
 }

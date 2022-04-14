@@ -25,6 +25,9 @@
         bool isDebuggedLie { set; get; }
 
         int lineNumber { set; get; }
+
+        bool hasLabel { set; get; }
+        String labelIS { set; get; }
         
     }
 }
