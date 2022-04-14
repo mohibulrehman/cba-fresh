@@ -2,7 +2,7 @@
 
 namespace SVM.VirtualMachine
 {
-    interface IVirtualMachine
+    public interface IVirtualMachine
     {
         Stack Stack { get; }
         int ProgramCounter { get; set; }
