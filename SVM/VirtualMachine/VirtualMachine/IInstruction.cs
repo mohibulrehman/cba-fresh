@@ -21,5 +21,10 @@
         /// that is executing this instruction
         /// </summary>
         SvmVirtualMachine VirtualMachine { set; }
+
+        bool isDebuggedLie { set; get; }
+
+        int lineNumber { set; get; }
+        
     }
 }

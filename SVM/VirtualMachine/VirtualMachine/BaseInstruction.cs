@@ -79,6 +79,9 @@
                 virtualMachine = value;
             }
         }
+
+        public bool isDebuggedLie { get ; set ; }
+        public int lineNumber { get; set; }
         #endregion
     }
 }

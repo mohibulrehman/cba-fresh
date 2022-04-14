@@ -28,43 +28,55 @@
         #endregion
 
         #region Non-public methods
-        internal static IInstruction CompileInstruction(string opcode)
+        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber)
         {
             IInstruction instruction = null;
 
             #region TASK 1 - TO BE IMPLEMENTED BY THE STUDENT
 
-            foreach (Type entity in SvmVirtualMachine.instructionsList)
-            {
-                if (entity.Name.ToUpper() == opcode.ToUpper())
+            try {
+                foreach (Type entity in SvmVirtualMachine.instructionsList)
                 {
-                    instruction = (IInstruction)Activator.CreateInstance(entity);
-                    return instruction;
+                    if (entity.Name.ToUpper() == opcode.ToUpper())
+                    {
+                        instruction = (IInstruction)Activator.CreateInstance(entity);
+                        instruction.isDebuggedLie = isDebugLine;
+                        instruction.lineNumber = lineNumber;
+                        return instruction;
+                    }
                 }
-            }
-
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);                   
+            }                        
             #endregion
 
             return instruction;
         }
 
-        internal static IInstruction CompileInstruction(string opcode, params string[] operands)
+        internal static IInstruction CompileInstruction(string opcode, bool isDebugLine, int lineNumber, params string[] operands)
         {
             IInstructionWithOperand instruction = null;
 
             #region TASK 1 - TO BE IMPLEMENTED BY THE STUDENT
 
-            foreach (Type entity in SvmVirtualMachine.instructionsList)
-            {
-                if (entity.Name.ToUpper() == opcode.ToUpper())
+            try {
+                foreach (Type entity in SvmVirtualMachine.instructionsList)
                 {
-                    instruction = (IInstructionWithOperand)Activator.CreateInstance(entity);
-                    instruction.Operands = operands;
+                    if (entity.Name.ToUpper() == opcode.ToUpper())
+                    {
+                        instruction = (IInstructionWithOperand)Activator.CreateInstance(entity);
+                        instruction.isDebuggedLie = isDebugLine;
+                        instruction.Operands = operands;
+                        instruction.lineNumber = lineNumber;
 
-                    return instruction;
+                        return instruction;
+                    }
                 }
             }
-
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+                        
             #endregion
 
             return instruction;

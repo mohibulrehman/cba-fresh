@@ -29,7 +29,7 @@ namespace SVM
         #region Fields
         private IDebugger debugger = null;
         private List<IInstruction> program = new List<IInstruction>();
-        private int instructionDebugIndex = -1;
+      //  private int instructionDebugIndex = -1;
         private Stack stack = new Stack();
         private int programCounter = 0;
         public delegate void CallBackButtonPressed(string result);
@@ -91,7 +91,6 @@ namespace SVM
                     continue;  // Can't load as .NET assembly, so ignoring it
                 }
 
-                Console.WriteLine("yes it should");
                 types =
                     types.Where(t => t.IsClass && t.GetInterfaces().Contains(typeof(IDebugger))
                     && t.Name.Equals("debugger", StringComparison.InvariantCultureIgnoreCase)).ToArray();
@@ -103,7 +102,7 @@ namespace SVM
                 }
                 else
                 {
-                    throw new SvmCompilationException("Some Thing invalid in SML source instruction has been found.");
+              //      throw new SvmCompilationException("Some Thing invalid in SML source instruction has been found.");
                 }
             }
         }
@@ -134,21 +133,22 @@ namespace SVM
 
         private static void loadInstructionListFromPath()
         {
+            try {
+                Assembly assemblyName = Assembly.GetExecutingAssembly();
 
-            Assembly assemblyName = Assembly.GetExecutingAssembly();
-
-            foreach (Type entity in assemblyName.ExportedTypes)
-            {
-
-                foreach (Type tpe in entity.GetInterfaces())
+                foreach (Type entity in assemblyName.ExportedTypes)
                 {
 
-                    if (tpe.Name == "IInstruction" || tpe.Name == "IInstructionwithoperand")
+                    foreach (Type tpe in entity.GetInterfaces())
                     {
-                        instructionsList.Add(entity);
+                        
+                        if (tpe.Name == "IInstruction" || tpe.Name == "IInstructionwithoperand")
+                        {
+                            instructionsList.Add(entity);
+                        }
                     }
                 }
-            }
+            } catch (Exception e) { Console.Write(e.Message); }
         }
         #endregion
 
@@ -250,7 +250,7 @@ namespace SVM
             programCounter = 0;
             foreach (var instruction in program)
             {
-                if (this.instructionDebugIndex > 0 && this.instructionDebugIndex == programCounter)
+                if (instruction.isDebuggedLie && instruction.lineNumber == programCounter)
                 {
                     /*Console.WriteLine("Never come usually Dear");
                     FrameDebug debugFrame = new FrameDebug();
@@ -292,12 +292,14 @@ namespace SVM
         {
             #region TASK 5 & 7 - MAY REQUIRE MODIFICATION BY THE STUDENT
 
+            var isDebugLine = false;
             //  For Debugging
             if (instruction.StartsWith('*'))
             {
                 instruction = instruction.Trim('*');
                 instruction = instruction.TrimStart();
-                this.instructionDebugIndex = lineNumber;
+                //this.instructionDebugIndex = lineNumber;
+                isDebugLine = true;
             }
 
             //  For Labeling
@@ -337,13 +339,13 @@ namespace SVM
             switch (tokens.Length)
             {
                 case 1:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0]));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine, lineNumber));
                     break;
                 case 2:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0], tokens[1].Trim('\"')));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, tokens[1].Trim('\"')));
                     break;
                 case 3:
-                    program.Add(JITCompiler.CompileInstruction(tokens[0], tokens[1].Trim('\"'), tokens[2].Trim('\"')));
+                    program.Add(JITCompiler.CompileInstruction(tokens[0],isDebugLine,lineNumber, tokens[1].Trim('\"'), tokens[2].Trim('\"')));
                     break;
             }
         }
